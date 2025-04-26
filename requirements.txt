@@ -3,4 +3,9 @@ pyrofork
 pymongo
 pyunpack
 patool
-gunicorn==20.1.0
+telebot
+aiohttp
+requests
+aiohttp
+Flask
+gunicorn
