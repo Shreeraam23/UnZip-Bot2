@@ -6,7 +6,7 @@
 
 from pyrogram import Client
 from Unzip.config import Config
-
+import os
 
 app = Client(
     "unzip_bot",
@@ -15,7 +15,8 @@ app = Client(
     api_hash=Config.API_HASH,
     plugins=dict(root="Unzip")
 )
-
+port = int(os.environ.get("PORT", 8080))
+server = HTTPServer(('0.0.0.0', port), Handler)
 
 print("🎊 I AM ALIVE 🎊  • Support @NT_BOTS_SUPPORT")
 app.run()
